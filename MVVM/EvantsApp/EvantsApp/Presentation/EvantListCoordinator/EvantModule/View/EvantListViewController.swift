@@ -8,15 +8,17 @@
 import UIKit
 
 class EvantListViewController: UIViewController {
+    // MARK: - Properties
+    var eventViewModel: EventListViewModel!
     
-    // MARK: UI Components
+    // MARK: - UI Components
     private lazy var rightBarButtonItem: UIBarButtonItem = {
        let plusImage = UIImage(systemName: "plus.circle.fill")
        let rightBarButtonItem = UIBarButtonItem(
         image: plusImage,
         style: .plain,
         target: self,
-        action: #selector(tappedRightBarButtonItem)
+        action: #selector(tappedAddEventButton)
        )
         rightBarButtonItem.tintColor = UIColor.primary
         return rightBarButtonItem
@@ -30,8 +32,8 @@ class EvantListViewController: UIViewController {
 
 // MARK: Private functions
 private extension EvantListViewController {
-    @objc func tappedRightBarButtonItem() {
-        print(#function)
+    @objc func tappedAddEventButton() {
+        eventViewModel.tappedAddEvent()
     }
 }
 
@@ -44,7 +46,7 @@ private extension EvantListViewController {
     
     func setNavigationBar() {
         navigationItem.rightBarButtonItem = rightBarButtonItem
-        navigationItem.title = "Events"
+        navigationItem.title = eventViewModel.title
         navigationController?.navigationBar.prefersLargeTitles = true
     }
 }

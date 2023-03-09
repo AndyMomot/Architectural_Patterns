@@ -15,6 +15,12 @@
 		77043D6529B7531500E17A4A /* EventListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77043D6429B7531500E17A4A /* EventListCoordinator.swift */; };
 		77043D6B29B7547300E17A4A /* EvantListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77043D6A29B7547300E17A4A /* EvantListViewController.swift */; };
 		77043D7029B75AD700E17A4A /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77043D6F29B75AD700E17A4A /* Color+Extension.swift */; };
+		776B5EEE29B9D33A00043C41 /* EvantsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 776B5EEC29B9D33A00043C41 /* EvantsApp.xcdatamodeld */; };
+		776B5EF029B9D42900043C41 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776B5EEF29B9D42900043C41 /* CoreDataManager.swift */; };
+		776B5EF229B9E12D00043C41 /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776B5EF129B9E12D00043C41 /* EventListViewModel.swift */; };
+		776B5EF829B9E31700043C41 /* AddEventCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776B5EF729B9E31700043C41 /* AddEventCoordinator.swift */; };
+		776B5EFA29B9E5E900043C41 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776B5EF929B9E5E900043C41 /* AddEventViewController.swift */; };
+		776B5EFC29B9E67500043C41 /* AddEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776B5EFB29B9E67500043C41 /* AddEventViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,12 @@
 		77043D6429B7531500E17A4A /* EventListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListCoordinator.swift; sourceTree = "<group>"; };
 		77043D6A29B7547300E17A4A /* EvantListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvantListViewController.swift; sourceTree = "<group>"; };
 		77043D6F29B75AD700E17A4A /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		776B5EED29B9D33A00043C41 /* EvantsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EvantsApp.xcdatamodel; sourceTree = "<group>"; };
+		776B5EEF29B9D42900043C41 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		776B5EF129B9E12D00043C41 /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
+		776B5EF729B9E31700043C41 /* AddEventCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventCoordinator.swift; sourceTree = "<group>"; };
+		776B5EF929B9E5E900043C41 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		776B5EFB29B9E67500043C41 /* AddEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +130,7 @@
 		77043D6829B7545800E17A4A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				776B5EF129B9E12D00043C41 /* EventListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -125,6 +138,8 @@
 		77043D6929B7546000E17A4A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				776B5EEC29B9D33A00043C41 /* EvantsApp.xcdatamodeld */,
+				776B5EEF29B9D42900043C41 /* CoreDataManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -133,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				77043D6229B7514100E17A4A /* EvantListCoordinator */,
+				776B5EF329B9E2C700043C41 /* AddEvantCoordinator */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -151,6 +167,40 @@
 				77043D6F29B75AD700E17A4A /* Color+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		776B5EF329B9E2C700043C41 /* AddEvantCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				776B5EF729B9E31700043C41 /* AddEventCoordinator.swift */,
+				776B5EF629B9E2F500043C41 /* Models */,
+				776B5EF529B9E2EE00043C41 /* ViewModels */,
+				776B5EF429B9E2E800043C41 /* Views */,
+			);
+			path = AddEvantCoordinator;
+			sourceTree = "<group>";
+		};
+		776B5EF429B9E2E800043C41 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				776B5EF929B9E5E900043C41 /* AddEventViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		776B5EF529B9E2EE00043C41 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				776B5EFB29B9E67500043C41 /* AddEventViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		776B5EF629B9E2F500043C41 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,10 +274,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				77043D6129B74BF900E17A4A /* AppCoordinator.swift in Sources */,
+				776B5EEE29B9D33A00043C41 /* EvantsApp.xcdatamodeld in Sources */,
 				77043D7029B75AD700E17A4A /* Color+Extension.swift in Sources */,
 				77043D6529B7531500E17A4A /* EventListCoordinator.swift in Sources */,
 				77043D4C29B74BB600E17A4A /* AppDelegate.swift in Sources */,
+				776B5EFC29B9E67500043C41 /* AddEventViewModel.swift in Sources */,
+				776B5EF829B9E31700043C41 /* AddEventCoordinator.swift in Sources */,
 				77043D4E29B74BB600E17A4A /* SceneDelegate.swift in Sources */,
+				776B5EFA29B9E5E900043C41 /* AddEventViewController.swift in Sources */,
+				776B5EF229B9E12D00043C41 /* EventListViewModel.swift in Sources */,
+				776B5EF029B9D42900043C41 /* CoreDataManager.swift in Sources */,
 				77043D6B29B7547300E17A4A /* EvantListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,6 +500,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		776B5EEC29B9D33A00043C41 /* EvantsApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				776B5EED29B9D33A00043C41 /* EvantsApp.xcdatamodel */,
+			);
+			currentVersion = 776B5EED29B9D33A00043C41 /* EvantsApp.xcdatamodel */;
+			path = EvantsApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 77043D4029B74BB600E17A4A /* Project object */;
 }
